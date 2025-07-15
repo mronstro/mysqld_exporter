@@ -29,7 +29,7 @@ const ndbinfoCpustatQuery = `
           SUM(cp.sleep_time) * 100 / SUM(elapsed_time) as sleep_perc,
           SUM(cp.send_time) * 100 / SUM(cp.elapsed_time) as send_perc,
           SUM(cp.spin_time) * 100 / SUM(cp.elapsed_time) as spin_perc
-          from cpustat_1sec as cp, threads
+          from ndbinfo.cpustat_1sec as cp, ndbinfo.threads
           WHERE cp.node_id = threads.node_id AND cp.thr_no = threads.thr_no
           GROUP BY cp.node_id, threads.thread_name, cp.thr_no;
 	`
