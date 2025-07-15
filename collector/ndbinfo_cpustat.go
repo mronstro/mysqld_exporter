@@ -88,7 +88,7 @@ func (ScrapeNdbinfoCpustat) Scrape(ctx context.Context, db *sql.DB, ch chan<- pr
 
 	var (
 		nodeID, threadNO                                           uint64
-                execPerc, sleepPerc, sendPerc, SpinPerc                    float64
+                execPerc, sleepPerc, sendPerc, spinPerc                    float64
 		threadName                                                 string
 	)
 	for ndbinfoCpustatRows.Next() {
