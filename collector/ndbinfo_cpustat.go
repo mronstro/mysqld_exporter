@@ -60,7 +60,7 @@ var (
 	)
 )
 
-// ScrapeNdbinfoThreadstat collects for `ndbinfo.threadstat`
+// ScrapeNdbinfoCpustat collects for `ndbinfo.threadstat`
 type ScrapeNdbinfoCpustat struct{}
 
 // Name of the Scraper. Should be unique.
@@ -69,7 +69,7 @@ func (ScrapeNdbinfoCpustat) Name() string {
 }
 
 // Help describes the role of the Scraper
-func (ScrapeNdbinfoThreadstat) Help() string {
+func (ScrapeNdbinfoCpustat) Help() string {
 	return "Collect metrics from ndbinfo.cpustat"
 }
 
