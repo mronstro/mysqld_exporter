@@ -91,6 +91,7 @@ var scrapers = map[collector.Scraper]bool{
 	collector.ScrapeSlaveHosts{}:                          false,
 	collector.ScrapeNdbinfoMemoryusage{}:                  true,
 	collector.ScrapeNdbinfoThreadstat{}:                   true,
+	collector.ScrapeNdbinfoCpustat{}:                      true,
 	collector.ScrapeNdbinfoCountersSPJ{}:                  true,
 	collector.ScrapeNdbinfoCountersTC{}:                   true,
 	collector.ScrapeNdbinfoClusterOperations{}:            true,
